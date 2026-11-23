@@ -1,0 +1,10 @@
+// cl-rand-xoroshiro-stage-5646: Test Suite
+import "../rxo_5646.zk"
+
+fn test_run():
+    res := xoroshiro_step_5646(1234, 5678)
+    if res != ((1234 ^ 5678) * 9 + 5646) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-rand-xoroshiro-stage-5646!")

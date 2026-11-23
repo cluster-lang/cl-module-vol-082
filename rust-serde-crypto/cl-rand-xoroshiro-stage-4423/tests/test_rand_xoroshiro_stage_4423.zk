@@ -1,0 +1,10 @@
+// cl-rand-xoroshiro-stage-4423: Test Suite
+import "../rxo_4423.zk"
+
+fn test_run():
+    res := xoroshiro_step_4423(1234, 5678)
+    if res != ((1234 ^ 5678) * 9 + 4423) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-rand-xoroshiro-stage-4423!")

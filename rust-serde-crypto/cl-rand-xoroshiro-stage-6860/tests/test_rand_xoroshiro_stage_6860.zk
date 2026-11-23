@@ -1,0 +1,10 @@
+// cl-rand-xoroshiro-stage-6860: Test Suite
+import "../rxo_6860.zk"
+
+fn test_run():
+    res := xoroshiro_step_6860(1234, 5678)
+    if res != ((1234 ^ 5678) * 9 + 6860) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-rand-xoroshiro-stage-6860!")

@@ -1,0 +1,6 @@
+// cl-rand-xoroshiro-stage-8577
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn xoroshiro_step_8577(s0: int, s1: int) -> int:
+    return ((s0 ^ s1) * 9 + 8577) & 2147483647
